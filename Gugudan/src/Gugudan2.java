@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Gugudan2 {
     public static void main(String[] args){
+        System.out.println("-----------기본 출력문-----------");
         // 4단(변수에 저장하고 출력)
         int result = 4 * 1;
         System.out.println(result);
@@ -23,7 +24,7 @@ public class Gugudan2 {
         result = 4 * 9;
         System.out.println(result);
 
-        System.out.println("-----------반복문----------");
+        System.out.println("-----------반복문-----------");
 
         // 4단(반복문, 변수에 저장해서 출력)
         for(int i = 1; i < 10; i++) {

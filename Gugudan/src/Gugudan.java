@@ -1,5 +1,6 @@
 public class Gugudan {
     public static void main(String[] argg){
+        System.out.println("-----------기본 출력문-----------");
         //2단
         System.out.println(2 * 1);
         System.out.println(2 * 2);
@@ -22,7 +23,6 @@ public class Gugudan {
         System.out.println(3 * 8);
         System.out.println(3 * 9);
 
-        //분리
         System.out.println("-----------반복문-----------");
 
         //2단(반복문)
@@ -35,7 +35,6 @@ public class Gugudan {
             System.out.println(3 * i);
         }
 
-        //분리
         System.out.println("-----------반복문2-----------");
 
         //2단, 3단 (반복문)
