@@ -22,52 +22,55 @@ public class Calendar {
     public static void main(String[] args) {
 
         // 숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("달을 입력하세요 : ");
-        int month = scanner.nextInt();
-
+        // 반복 실행을 위해 for문 사용
         Calendar cal = new Calendar();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("반복 횟수를 입력하세요 : ");
+        int repeat = scanner.nextInt();
 
+        for(int i = 0; i < repeat; i++) {
+            System.out.println("달을 입력하세요 : ");
+            int month = scanner.nextInt();
 
-        System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
-        scanner.close();
+            System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
 
+            System.out.println("------------------if 조건문을 이용해서 출력---------------");
 
-        System.out.println("------------------if 조건문을 이용해서 출력---------------");
-
-        // if를 이용해서 출력
-        if(month == 2) {
-            System.out.printf("%d월은 29일까지 있습니다.\n", month);
-        }
-        else if(month % 2 == 0) {
-            System.out.printf("%d월은 30일까지 있습니다.\n", month);
-        }
-        else {
-            System.out.printf("%d월은 31일까지 있습니다.\n", month);
-        }
-
-        System.out.println("------------------switch 조건문을 이용해서 출력---------------");
-
-        switch (month) {
-            case 2:
+            // if를 이용해서 출력
+            if(month == 2) {
                 System.out.printf("%d월은 29일까지 있습니다.\n", month);
-                break;
-            case 4:
-            case 6:
-            case 8:
-            case 10:
-            case 12:
+            }
+            else if(month % 2 == 0) {
                 System.out.printf("%d월은 30일까지 있습니다.\n", month);
-                break;
-            default:
+            }
+            else {
                 System.out.printf("%d월은 31일까지 있습니다.\n", month);
-                break;
+            }
 
+            System.out.println("------------------switch 조건문을 이용해서 출력---------------");
+
+            switch (month) {
+                case 2:
+                    System.out.printf("%d월은 29일까지 있습니다.\n", month);
+                    break;
+                case 4:
+                case 6:
+                case 8:
+                case 10:
+                case 12:
+                    System.out.printf("%d월은 30일까지 있습니다.\n", month);
+                    break;
+                default:
+                    System.out.printf("%d월은 31일까지 있습니다.\n", month);
+                    break;
+
+            }
         }
+
 
         System.out.println("------------------예시 달력---------------");
         cal.printSampleCalendar();
-
+        scanner.close();
 
     }
 }
