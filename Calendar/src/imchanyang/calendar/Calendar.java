@@ -23,15 +23,24 @@ public class Calendar {
 
         // 숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
         // 반복 실행을 위해 for문 사용
-        Calendar cal = new Calendar();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("반복 횟수를 입력하세요 : ");
-        int repeat = scanner.nextInt();
 
-        for(int i = 0; i < repeat; i++) {
+        Calendar cal = new Calendar();
+
+        while(true) {
+            System.out.println("---------------------------------------------------------------------------");
+
+            String PROMPT= "cal> ";
             System.out.println("달을 입력하세요 : ");
+            System.out.print(PROMPT);
+
+            Scanner scanner = new Scanner(System.in);
             int month = scanner.nextInt();
 
+            // 입력한 달이 1~12가 아니면 종료
+            if ((month < 1) || (month > 12)) {
+                System.out.println("$$$$$$$$$$$$$$$$$$종료 커맨드$$$$$$$$$$$$$$$$$$$$");
+                break;
+            }
             System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
 
             System.out.println("------------------if 조건문을 이용해서 출력---------------");
@@ -70,7 +79,6 @@ public class Calendar {
 
         System.out.println("------------------예시 달력---------------");
         cal.printSampleCalendar();
-        scanner.close();
 
     }
 }
