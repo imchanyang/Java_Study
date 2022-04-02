@@ -1,5 +1,9 @@
 class Data {
     int x;
+
+    void print() {
+        System.out.println("asdf");
+    }
 }
 public class ReferenceParamEx {
     public static void main(String[] args) {
