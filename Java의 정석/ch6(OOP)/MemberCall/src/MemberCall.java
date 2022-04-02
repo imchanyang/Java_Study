@@ -32,4 +32,5 @@ public class MemberCall {
         instanceMethod1(); // 인스턴스 메서드에서는 인스턴스 변수 사용가능.
     }
 
+
 }
